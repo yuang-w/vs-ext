@@ -1,12 +1,18 @@
 {
-  "name": "copy-line-ref",
-  "displayName": "Copy Line Reference",
-  "description": "Copy file path with selected line range to clipboard as @file#Lstart-Lend",
+  "publisher": "yuang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuang-w/vs-ext"
+  },
+  "name": "vs-ext-yuang",
+  "displayName": "yuang's extensions",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.75.0"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -19,8 +25,8 @@
     "keybindings": [
       {
         "command": "copyLineRef.copy",
-        "key": "ctrl+alt+c",
-        "when": "editorTextFocus && editorHasSelection"
+        "key": "alt+c",
+        "when": "editorTextFocus"
       }
     ]
   },
@@ -30,8 +36,9 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.75.0",
     "@types/node": "^20.0.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^3.9.1",
     "typescript": "^5.3.0"
   }
 }

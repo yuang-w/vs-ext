@@ -27,8 +27,8 @@ export function activate(context: vscode.ExtensionContext) {
       const startLine = selection.start.line + 1;
       const endLine = selection.end.line + 1;
       ref = startLine === endLine
-        ? `@${relativePath}#${startLine}`
-        : `@${relativePath}#${startLine}-${endLine}`;
+        ? `${relativePath}#${startLine}`
+        : `${relativePath}#${startLine}-${endLine}`;
     }
 
     await vscode.env.clipboard.writeText(ref);
